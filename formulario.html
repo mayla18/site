@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de satisfação</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+        }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    label, input{
+      display: block;
+      margin-bottom: 10px;
+    }
+    button {
+      margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+   <h1>Formulário</h1>
+   <h2>Pesquisa de satisfação</h2>
+   <form action="#" method="post">
+    <!--Campo de texto-->
+    <label for="nome"><b>Nome:</b></label>
+    <input tyoe="text" id="nome" name="nome" required>
+    <!--Campo de email-->
+    <label for="email"><b>Email:</b></label>
+    <input tyoe="email" id="email" name="email" required>
+    <hr>
+    <!--Botões de Rádio-->
+   <label><b>Avaliação de navegação</b></label>
+   <br>
+   <label><input type="radio" name="av" value="1" required>Muito ruim</label>
+   <br>
+   <label><input type="radio" name="av" value="2" required>Ruim</label>
+   <br>
+   <label><input type="radio" name="av" value="3" required>Razoavel</label>
+   <br>
+   <label><input type="radio" name="av" value="4" required>Bom</label>
+   <br>
+   <label><input type="radio" name="av" value="5" required>Muito bom</label>
+   <br>
+    <!--Caixas de seleção-->
+   <label><b>Feedback-Pontos Positivos</b></label>
+   <label><input type="checkbox" name="Pv" value="fn" required>Facilidade de Navegação</label>
+   <label><input type="checkbox" name="Pv" value="ds" required>Design do site</label>
+   <label><input type="checkbox" name="Pv" value="vc" required>Velocidade de carregamento</label>
+       <!--Área de texto-->
+   <label for="comentarios"><b>Comentários:</b></label>
+   <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+    <!--Botão de envio-->
+    <button type="submit"><b>Enviar</b></button>
+   </form>
+</body>
+</html>

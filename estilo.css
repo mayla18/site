@@ -1,0 +1,165 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+ 
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center; /* Centraliza o texto */
+}
+ 
+th {
+    background-color: #f2f2f2;
+}
+ 
+.col-regiao {
+    width: 20%;
+}
+ 
+.col-estado {
+    width: 30%;
+}
+ 
+.col-uf {
+    width: 10%;
+}
+ 
+.col-capital {
+    width: 40%;
+}
+.cn {
+    background-color: #cbffd2; /* Cor para a região Norte */
+}
+ 
+.nordeste {
+    background-color: #add8e6; /* Cor para a região Nordeste */
+}
+ 
+.centro-oeste {
+    background-color: #90ee90; /* Cor para a região Centro-Oeste */
+}
+ 
+.sudeste {
+    background-color: #ffff99; /* Cor para a região Sudeste */
+}
+ 
+.sul {
+    background-color: #ffb6c1; /* Cor para a região Sul */
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+ 
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+ 
+.title:hover {
+    color: #4caf50;
+    transform: scale(1.1);
+}
+ 
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    width: 80%;
+    max-width: 1000px;
+}
+ 
+.menu-item {
+    background: linear-gradient(45deg, #ff6347, #f8b400);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+}
+ 
+.menu-item:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+ 
+.menu-item .icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+ 
+.menu-item:hover .icon {
+    transform: scale(1.4);
+    color: #4caf50;
+}
+ 
+.menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+ 
+.menu-item a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
+ 
+/* Alterações nas cores e gradientes */
+.menu-item:nth-child(1) {
+    background: linear-gradient(45deg, #f8b400, #f44336);
+}
+.menu-item:nth-child(2) {
+    background: linear-gradient(45deg, #03a9f4, #2196f3);
+}
+.menu-item:nth-child(3) {
+    background: linear-gradient(45deg, #9c27b0, #673ab7);
+}
+.menu-item:nth-child(4) {
+    background: linear-gradient(45deg, #4caf50, #8bc34a);
+}
+.menu-item:nth-child(5) {
+    background: linear-gradient(45deg, #e91e63, #ff4081);
+}
+.menu-item:nth-child(6) {
+    background: linear-gradient(45deg, #ff5722, #ff9800);
+}
+.menu-item:nth-child(7) {
+    background: linear-gradient(45deg, #607d8b, #455a64);
+}
+.menu-item:nth-child(8) {
+    background: linear-gradient(45deg, #2196f3, #03a9f4);
+}
+.menu-item:nth-child(9) {
+    background: linear-gradient(45deg, #673ab7, #3f51b5);
+}

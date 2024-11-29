@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+nav {
+    display: inline-block;
+}
+nav a {
+    color: rgb(212, 130, 130);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    /*background-color: #575757;*/
+    color: #df8272; /* Muda a cor do texto */
+    font-size: 1.1em; /* Aumenta o tamanho do texto */
+    border-bottom: 2px solid #FF6347; /* Adiciona uma borda inferior */
+    background-color: #f0f0f0; /* Muda a cor de fundo */
+    padding: 2px 4px; /* Adiciona um pouco de padding */
+    border-radius: 4px; /* Arredonda os cantos */
+    }

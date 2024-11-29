@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal Criativo</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Estilo básico para o carrossel de ícones */
+        .carousel-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+        }
+
+        .carousel-icons img, .carousel-icons div {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+        }
+
+        .carousel-icons .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="title">Bem vindo ao meu mundo Pessoal</div>
+   
+   
+    <div class="menu-container">
+        <div class="menu-item">
+            <div class="icon">📂</div>
+            <a href="portfolio.html">Portifolio</a>
+        </div>
+        <div class="menu-item">
+            <div class="icon"> 📄</div>
+            <a href="curriculo.html">Curriculo</a>
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">💬</div>
+            <a href="imagens/matematica.png">Matématica</a>
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">💬</div>
+            <a href="imagens/linguagens22.PNG">Linguagens </a>
+        </div>
+
+
+        <div class="menu-item">
+            <div class="icon">💬</div>
+            <a href="imagens/humanas22.PNG">Ciências humanas </a>
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">💬</div>
+            <a href="imagens/natureza.PNG">Ciências da Natureza</a>
+        </div>
+
+        <div class="menu-item">
+            <div class="icon">🖋️</div>
+            <a href="imagens/pessoal.PNG"> Página pessoal </a>
+        </div>
+
+        <div class="menu-item" id="tecnico-menu">
+            <div class="icon">💡🔑</div>
+            <a href="MicrosoftTeams-video (2).mp4" target="_blank">Técnico</a>
+            <div class="carousel-icons" id="carousel-tecnico">
+                <div class="active">🔧</div>
+                <div>⚙️</div>
+                <div>🔌</div>
+            </div>
+        </div>
+        <div class="menu-item" id="fotos-menu">
+            <div class="icon">📸</div>
+            <a href="imagens/juntos 2 png.PNG">Fotos</a>
+            <div class="carousel-icons" id="carousel-fotos">
+                <img src="imagens/juntos.png" class="active" alt="Foto 1">
+                <img src="imagens/juntos.png" alt="Foto 2">
+                <img src="imagens/juntos 3 png.jfif" alt="Foto 3">
+            </div>
+        </div>
+        <div class="menu-item" id="fotos-menu">
+            <div class="icon">📝</div>
+            <a href="formulario.html">Formulário de Satisfação</a>
+            <div class="carousel-icons" id="carousel-fotos">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para iniciar o carrossel
+        function startCarousel(id) {
+            let currentIndex = 0;
+            const items = document.querySelectorAll(`#${id} .active`);
+            const allItems = document.querySelectorAll(`#${id} div, #${id} img`);
+            
+            setInterval(() => {
+                allItems[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % allItems.length;
+                allItems[currentIndex].classList.add('active');
+            }, 2000); // Troca de ícone/imagem a cada 2 segundos
+        }
+
+        // Inicializar os carrosséis para "Fotos" e "Técnico"
+        startCarousel('carousel-tecnico');
+        startCarousel('carousel-fotos');
+
+        // Adicionar animação de efeito de zoom nos itens do menu
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.05)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+ 
+</body>
+</html>
